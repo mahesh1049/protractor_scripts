@@ -3,9 +3,9 @@ exports.config = {
   capabilities: {
         browserName: 'firefox',
 
-        chromeOptions: {
-            args: [ "--headless", "--disable-gpu", "--no-sandbox", "--window-size=800,600" ]
-        }
+//         chromeOptions: {
+//             args: [ "--headless", "--disable-gpu", "--no-sandbox", "--window-size=800,600" ]
+//         }
     },
   specs: ['todo-spec.js']
 };
