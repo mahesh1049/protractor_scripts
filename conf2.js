@@ -8,7 +8,7 @@ exports.config = {
    browserName: 'firefox',
    'moz:firefoxOptions': {
          args: ['--verbose'],
-    //     binary: 'C:/Program Files/Mozilla Firefox/firefox.exe' //Provide binary location to avoid potential binary not found errors 
+         binary: '/usr/bin/firefox' //Provide binary location to avoid potential binary not found errors 
     //Need to start cmd via admin mode to avoid permission error
      }
 },   
