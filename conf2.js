@@ -20,5 +20,5 @@ exports.config = {
   },
  
   seleniumAddress: 'http://localhost:4444/wd/hub',
-  specs: ['src/com/sam/scriptjs/iframes.spec.js']
+  specs: ['todo-spec.js']
 }
