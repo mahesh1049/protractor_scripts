@@ -49,7 +49,7 @@ exports.config = {
         screenshotsOnlyOnFailure: false,
         testPlatform: 'Linux',
       };
-      new HTMLReport().from('xmltestoutput.xml', testConfig);
+      new HTMLReport().from('./reports/xmltestoutput.xml', testConfig);
     });
   },
 
