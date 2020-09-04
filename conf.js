@@ -8,11 +8,11 @@ exports.config = {
       new jasmineReporters.JUnitXmlReporter({
         consolidateAll: true,
         filePrefix: 'xmltestoutput',
-        savePath: '.',
+        savePath: './reports',
       })
     );
 
-    fs.emptyDir('screenshots/', function (err) {
+    fs.emptyDir('reports/screenshots/', function (err) {
       console.log(err);
     });
     jasmine.getEnv().addReporter({
@@ -21,7 +21,7 @@ exports.config = {
           var browserName = caps.get('browserName');
           browser.takeScreenshot().then(function (png) {
             var stream = fs.createWriteStream(
-              'screenshots/' + browserName + '-' + result.fullName + '.png'
+              'reports/screenshots/' + browserName + '-' + result.fullName + '.png'
             );
             stream.write(new Buffer.from(png, 'base64'));
             stream.end();
@@ -41,9 +41,9 @@ exports.config = {
       platform = caps.get('platform');
       testConfig = {
         reportTitle: 'Protractor Test Execution Report',
-        outputPath: './',
+        outputPath: './reports/',
         outputFilename: 'ProtractorTestReport',
-        screenshotPath: './screenshots',
+        screenshotPath: './reports/screenshots',
         testBrowser: browserName,
         modifiedSuiteName: false,
         screenshotsOnlyOnFailure: false,
